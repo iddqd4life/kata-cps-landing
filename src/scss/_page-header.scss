@@ -1,0 +1,25 @@
+.page-header {
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: url('../img/hightlight.svg');
+  padding: 0 16px;
+  display: flex;
+
+  &__buttons {
+    display: none;
+
+    @media screen and (min-width: 1440px) {
+      display: flex;
+      gap: 32px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0 24px;
+  }
+
+  &__title {
+    @extend %bold-font;
+    margin-right: auto;
+  }
+}

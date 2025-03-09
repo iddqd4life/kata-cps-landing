@@ -1,0 +1,45 @@
+.sidenav-footer {
+  padding: 32px 16px;
+  margin-top: auto;
+
+  &__buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  &__mail {
+    @extend %medium-font;
+    color: $primary-text-color;
+    text-decoration: none;
+  }
+
+  &__phone-number {
+    @extend %bold-font;
+    color: $primary-text-color;
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  &__lang-switcher {
+    display: flex;
+    gap: 7px;
+  }
+
+  &__lang {
+    @extend %medium-font;
+    color: $primary-text-color;
+    text-decoration: none;
+
+    &--active {
+      color: $secondary-text-color;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.arrow-link {
+  display: flex;
+  background-color: $bg-color;
+  border: 1px $separator-color solid;
+  border-radius: 6px;
+  max-width: 240px;
+  width: 100%;
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: $action-color;
+  }
+
+  &--price {
+    display: grid;
+    padding: 16px;
+    grid-template-areas: "repair repair"
+                         "cost cost"
+                         "time order";
+    grid-template-columns: 1fr 119px;
+    row-gap: 16px;
+    column-gap: 28px;
+    max-width: 260px;
+    min-height: 200px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.007);
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 23px 0;
+      grid-template-columns: 1fr 74px 81px 119px;
+      grid-template-areas: "repair cost order";
+      min-height: auto;
+      column-gap: 20px;
+      border: none;
+    }
+  }
+
+  &__text {
+    @extend %medium-font;
+    color: $primary-text-color;
+    align-self: flex-start;
+  }
+
+  &--brand {
+    height: 72px;
+    padding: 10px 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--repair {
+    height: 160px;
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    border: 2px $action-color solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../img/arrow.svg');
+    margin-left: auto;
+
+    &--bottom {
+      align-self: flex-end;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: none;
+  }
+}

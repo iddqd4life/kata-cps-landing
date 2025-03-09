@@ -1,0 +1,7 @@
+.cards-grid {
+  max-height: 160px;
+
+  &--full {
+    max-height: none;
+  }
+}

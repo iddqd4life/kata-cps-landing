@@ -1,0 +1,75 @@
+.round-button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &__title {
+    @extend %medium-font;
+    color: $primary-text-color;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &--768 {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__content {
+    border-radius: 50%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: $action-color;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &--menu {
+      background-image: url('../img/menu.svg');
+    }
+
+    &--request {
+      background-image: url('../img/request.svg');
+    }
+
+    &--status {
+      background-image: url('../img/status.svg');
+    }
+
+    &--contact {
+      background-image: url('../img/contact.svg');
+    }
+
+    &--message {
+      background-image: url('../img/message.svg');
+    }
+
+    &--phone {
+      background-image: url('../img/phone.svg');
+    }
+
+    &--search {
+      background-image: url('../img/search.svg');
+    }
+
+    &--close {
+      background-image: url('../img/close.svg');
+    }
+
+  }
+
+  &--close-sidenav {
+    @media screen and (min-width: 1440px) {
+      display: none;
+    }
+  }
+}

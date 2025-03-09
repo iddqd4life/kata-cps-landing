@@ -1,0 +1,114 @@
+.sidebar {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  background-color: $bg-color;
+  min-height: 100vh;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+
+  &__button-container {
+    padding: 24px 16px;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 1440px) {
+      position: fixed;
+      transform: translateX(-100%);
+      padding-top: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 305px;
+    display: flex;
+    box-shadow: none;
+  }
+
+  &--left {
+    top: 0;
+    left: 0;
+  }
+
+  &--right {
+    right: 0;
+    top: 0;
+    display: none;
+
+    @media screen and (min-width: 1440px) {
+      box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+    }
+  }
+
+  &--active {
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    max-width: 360px;
+  }
+
+  &__container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    max-width: 360px;
+
+    &--right {
+      position: static;
+      justify-content: flex-start;
+      max-width: none !important;
+
+      @media screen and (min-width: 1440px) {
+        max-width: none !important;
+      }
+    }
+
+    @media screen and (min-width: 1440px) {
+      max-width: 305px;
+    }
+  }
+
+  &__title {
+    @extend %bold-font;
+    background-image: url('../img/hightlight.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 0 16px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 1440px) {
+      margin-top: 32px;
+    }
+  }
+
+  &__main {
+    padding: 0 16px;
+  }
+
+  &__input {
+    @extend %medium-font;
+    color: $primary-text-color;
+    padding: 12px 16px;
+    outline: none;
+    border: 1px solid $separator-color;
+    border-radius: 8px;
+    resize: none;
+
+    &--message {
+      height: 118px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__form-text {
+    @extend %medium-font;
+    font-size: 14px;
+    color: $secondary-text-color;
+  }
+}

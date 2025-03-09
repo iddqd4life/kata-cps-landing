@@ -1,0 +1,25 @@
+.commercial-offer {
+  &__text {
+    @extend %regular-font;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 421px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    @extend %bold-font;
+    font-size: 16px;
+    text-align: left;
+    border: none;
+    background: none;
+
+    &::after {
+      content: url("../img/arrow.svg");
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+}

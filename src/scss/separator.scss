@@ -1,0 +1,15 @@
+.separator {
+  display: block;
+  height: 32px;
+  width: 2px;
+  border-radius: 1px;
+  background-color: $separator-color;
+
+  &--768 {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+}

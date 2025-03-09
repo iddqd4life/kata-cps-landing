@@ -1,0 +1,46 @@
+.footer {
+  background-color: $main-bg-color;
+  padding: 0 16px;
+  padding-top: 16px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 24px
+  }
+
+  &__content {
+    border-top: 1px solid $accent-color;
+    @extend %medium-font;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 19px;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 35px;
+      padding-top: 18px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      &--copyright {
+        text-align: left;
+      }
+
+      &--info {
+        text-align: right;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $secondary-text-color;
+  }
+}

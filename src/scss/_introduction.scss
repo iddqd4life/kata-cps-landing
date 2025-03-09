@@ -1,0 +1,51 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-areas: 'text image'
+                         'button image';
+    grid-template-columns: 1fr 360px;
+    column-gap: 48px;
+    align-items: start;
+    padding: 0 24px;
+
+    &__img {
+      grid-area: image;
+      max-width: 360px;
+      display: block;
+    }
+  }
+
+  &__text-side {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      gap: 10px;
+    }
+  }
+
+  &__text {
+    max-height: 90px;
+    overflow: hidden;
+    @extend %regular-font;
+    line-height: 22px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    @media screen and (min-width: 768px) {
+      padding: 0;
+      max-height: 160px;
+    }
+  }
+
+  &__text--full {
+    max-height: none;
+  }
+}

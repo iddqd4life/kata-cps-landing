@@ -1,0 +1,8 @@
+.header {
+  border-bottom: 1px solid $accent-color;
+  background-color: $bg-color;
+
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}

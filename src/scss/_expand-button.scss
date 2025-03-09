@@ -1,0 +1,43 @@
+.expand-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &--brands,
+  &--repair {
+    margin-top: 24px;
+    display: none;
+
+    @media screen and (min-width: 768px){
+      display: flex;
+    }
+  }
+
+  padding: 0 16px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+
+  &__arrows {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../img/arrows.svg');
+    display: block;
+  }
+
+  &__arrows--rotate {
+    transform: rotate(180deg);
+  }
+
+  &__text {
+    @extend %medium-font;
+    color: $primary-text-color;
+  }
+}

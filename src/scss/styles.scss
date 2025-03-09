@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'TTLakes';
+@import 'header';
+@import 'container';
+@import 'mobile-header';
+@import 'round-button';
+@import 'separator';
+@import 'logo';
+@import 'main';
+@import 'page-header';
+@import 'anchor-links';
+@import 'anchor-link';
+@import 'introduction';
+@import 'expand-button';
+@import 'content-header';
+@import 'content';
+@import 'swiper-container';
+@import 'swiper-slide';
+@import 'arrow-link';
+@import 'swiper-pagination';
+@import 'price-row';
+@import 'action-button';
+@import 'commercial-offer';
+@import 'footer';
+@import 'sidenav-header';
+@import 'overlay';
+@import 'sidebar';
+@import 'sidenav-header-container';
+@import 'sidenav-menu';
+@import 'sidenav-footer';
+@import 'swiper-wrapper';
+@import 'table-grid-header';
+@import 'cards-grid';
+@import 'sidenav';
+@import 'hyperlink';
+@import 'action-hover';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,24 @@
+.swiper-wrapper {
+  &.cards-grid {
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+      overflow-y: hidden;
+      box-sizing: border-box;
+      column-gap: 24px;
+      row-gap: 16px;
+    }
+  }
+
+  &.table-grid {
+    @media screen and (min-width: 768px) {
+      display: grid;
+      overflow-y: hidden;
+      box-sizing: border-box;
+      padding: 0 16px;
+      background-color: $bg-color;
+      border-radius: 6px;
+    }
+  }
+
+}

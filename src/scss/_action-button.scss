@@ -1,0 +1,25 @@
+.action-button {
+  border: none;
+  border-radius: 20px;
+  padding: 4px 12px;
+  background: $action-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: end;
+  cursor: pointer;
+
+  &__text {
+    @extend %bold-font;
+    color: $bg-color;
+    font-size: 12px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../img/order.svg');
+  }
+}

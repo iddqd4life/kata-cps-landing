@@ -1,0 +1,39 @@
+.anchor-links {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 100%;
+  }
+
+  &::after {
+    top: 0;
+    right: 0;
+    background: linear-gradient(270.00deg, rgb(248, 248, 248) 16.836%, rgba(248, 248, 248, 0) 100%);
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    background: linear-gradient(90.00deg, rgb(248, 248, 248) 16.836%, rgba(248, 248, 248, 0) 100%);
+  }
+
+  &__list {
+    overflow-x: auto;
+    padding: 0 16px;
+    display: flex;
+    list-style: none;
+
+    @media screen and (min-width: 768px) {
+      padding: 0 24px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      flex-wrap: wrap;
+    }
+  }
+}

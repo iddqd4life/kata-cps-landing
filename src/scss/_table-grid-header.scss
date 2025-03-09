@@ -1,0 +1,12 @@
+.table-grid-header {
+  display: none;
+  @extend %medium-font;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 74px 81px 119px;
+    padding: 16px;
+    column-gap: 20px;
+    font-size: 14px;
+  }
+}
